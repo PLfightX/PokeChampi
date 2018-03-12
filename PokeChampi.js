@@ -22,7 +22,7 @@ client.on('message', message => {
   var aID = message.author.id;
 
   if (fs.existsSync(aID)) {
-    try {
+    /*try {*/
       var main = fs.readFileSync(aID+"/settings.txt", "utf-8");
       var pokemons = fs.readFileSync(aID+"/pokemons.txt", "utf-8").split("\r\n");
       pokemons.pop();
@@ -47,9 +47,9 @@ client.on('message', message => {
       }
       pokemons[main] = mainID+" "+mainLV+" "+xp;
       fs.writeFileSync(aID+"/pokemons.txt", pokemons.join("\r\n")+"\r\n");
-    } catch (error) {
+    /*} catch (error) {
       console.log("Erreur : Xp on message ==> "+error)
-    }
+    }*/
   }
 
   if (!message.content.startsWith(prefix)) return;
