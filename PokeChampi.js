@@ -33,7 +33,7 @@ client.on('message', message => {
       //console.log(mainID)
       //console.log(mainXP)
       //console.log(multi)
-      var xp = 10*multi+mainXP;
+      var xp = 20*multi+mainXP;
       //console.log(xp)
       while (xp >= lvlup[mainLV-1]) {
         xp = xp-lvlup[mainLV-1];
