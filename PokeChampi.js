@@ -24,6 +24,7 @@ client.on('message', message => {
   if (fs.existsSync(aID)) {
     /*try {*/
       var main = fs.readFileSync(aID+"/settings.txt", "utf-8");
+      console.log(main)
       var pokemons = fs.readFileSync(aID+"/pokemons.txt", "utf-8").split("\r\n");
       pokemons.pop();
       var mainID = pokemons[main].split(" ")[0];
